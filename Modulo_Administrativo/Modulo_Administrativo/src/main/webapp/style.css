@@ -1,0 +1,28 @@
+*{
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar-brand{
+	font-size: 20pt;
+}
+
+
+.panel{
+	margin-top: 20px;
+	margin-left: 0PX;
+}
+
+.list-group{
+	margin-bottom: 0px;
+}
+
+.btn-primary{
+	margin-top: 30px;
+	width: 90px;
+	margin-bottom: 40px;
+}
+
+.func_estoque, .tabela_estoque, .dt_relatorio{
+	margin-top: 40px;
+}
+
