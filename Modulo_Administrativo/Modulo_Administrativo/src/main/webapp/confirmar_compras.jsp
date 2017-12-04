@@ -25,6 +25,7 @@
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
 	<meta charset="UTF-8">
+	<script type="text/javascript" src="confirmar_compras.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -103,17 +104,19 @@
 								<th>ID</th>
 								<th>Data</th>
 								<th>Qtd. de Produtos</th>
-								<th>Valor</th>
-								<th>Status</th>
+								<th>Valor (R$)</th>
+								<th>Confirmado</th>
+								<th>Cancelado</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td></td>
-								<th></th>
-								<th></th>
-								<td></td>
-								<td></td>
+								<td>0</td>
+								<td>22/09/2017</td>
+								<td>4</td>
+								<td>5</td>
+								<td>false</td>
+								<td>false</td>
 							</tr>						
 						</tbody>						
 					</table>					

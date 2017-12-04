@@ -27,6 +27,7 @@
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	
 	<meta charset="UTF-8">
+	<script type="text/javascript" src="manter_desconto.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -103,6 +104,8 @@
 					<table id="tabela" class="table table-hover">
 						<thead>
 							<tr>
+								<th>ID Desconto</th>
+								<th>ID Produto</th>	
 								<th>Produto</th>
 								<th>% Desconto</th>
 								<th>Data Início</th>
@@ -111,10 +114,12 @@
 						</thead>
 						<tbody>
 							<tr>
-								<th></th>
-								<th></th>
-								<td></td>
-								<td></td>
+								<td>0</td>
+								<td>1</td>
+								<td>Vinho 600 ml</td>
+								<td>10</td>
+								<td>23/03/2007</td>
+								<td>23/04/2007</td>
 							</tr>	
 						</tbody>						
 					</table>					
@@ -134,8 +139,9 @@
 						<div class="form-group">
 							<form method="" action="">								
 								<label for="produto">Selecione o Produto:</label>
-								<select name="produto" class="form-control" required>											
-									<option value=""></option>
+								<select name="produto" class="form-control" required>							
+									<option value="0">Cerveja 300ml</option>
+									<option value="1">Vinho 600ml</option>
 								</select>
 
 								<br/>
@@ -176,19 +182,19 @@
 						<div class="form-group">
 							<form method="" action="">
 								<label for="produto">Selecione o Produto:</label>
-								<select name="produto" class="form-control" required>											
-									<option value=""></option>
+								<select name="produto" class="form-control" required>									<option value="0">Cerveja 300ml</option>
+									<option value="1">Vinho 600ml</option>
 								</select>
 
 								<br/>
 
 								<label for="dt_inicio">Data Início:</label>
-								<input type="date" class="form-control" name="dt_inicio">
+								<input type="date" class="form-control" name="dt_inicio" required>
 								
 								<br/>
 
 								<label for="dt_fim">Data Fim:</label>
-								<input type="date" class="form-control" name="dt_fim">
+								<input type="date" class="form-control" name="dt_fim" required>
 
 								<br/>
 

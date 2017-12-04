@@ -27,6 +27,7 @@
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	
 	<meta charset="UTF-8">
+	<script type="text/javascript" src="tipo.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -109,9 +110,13 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td></td>
-								<td></td>
+								<td>0</td>
+								<td>Cerveja</td>
 							</tr>	
+							<tr>
+								<td>1</td>
+								<td>Vinho</td>
+							</tr>
 						</tbody>						
 					</table>					
 				</div>
