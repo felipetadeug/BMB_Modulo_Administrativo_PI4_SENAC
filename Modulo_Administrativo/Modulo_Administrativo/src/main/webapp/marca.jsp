@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -101,19 +102,12 @@
 							</tr>
 						</thead>
 						<tbody>
+                                                <c:forEach var="marca" items="${ListMarca}">
 							<tr>
-								<td>0</td>
-								<td>Skol</td>
-							</tr>	
-							<tr>
-								<td>1</td>
-								<td>Natalia</td>
-							</tr>						
-							<tr>
-								<td>2</td>
-								<td>Original</td>
+								<td>${marca.getIdMarca()}</td>
+								<td>${marca.getMarca()}</td>
 							</tr>
-												
+                                                </c:forEach>
 						</tbody>						
 					</table>					
 				</div>

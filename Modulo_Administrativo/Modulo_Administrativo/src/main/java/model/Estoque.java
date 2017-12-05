@@ -15,6 +15,12 @@ public class Estoque {
     public Estoque(){
         
     }
+
+    public Estoque(int idEstoque, int quantidade, Date data) {
+        this.idEstoque = idEstoque;
+        this.quantidade = quantidade;
+        this.data = data;
+    }
    
     public int getIdEstoque() {
         return idEstoque;

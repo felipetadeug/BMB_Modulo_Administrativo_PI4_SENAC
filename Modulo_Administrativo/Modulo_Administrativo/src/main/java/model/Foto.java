@@ -13,6 +13,12 @@ public class Foto {
     public Foto() {
     }
 
+    public Foto(int idFoto, int ordem, String path) {
+        this.idFoto = idFoto;
+        this.ordem = ordem;
+        this.path = path;
+    }
+
     public int getIdFoto() {
         return idFoto;
     }

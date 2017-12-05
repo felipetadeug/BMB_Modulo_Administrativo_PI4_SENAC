@@ -12,6 +12,11 @@ public class Tipo {
     public Tipo() {
     }
 
+    public Tipo(int idTipo, String tipo) {
+        this.idTipo = idTipo;
+        this.tipo = tipo;
+    }
+
     public int getIdTipo() {
         return idTipo;
     }

@@ -16,6 +16,13 @@ public class Desconto {
    public Desconto(){
        
    }
+
+    public Desconto(int idDesconto, double percentual, Date dataInicial, Date dataFinal) {
+        this.idDesconto = idDesconto;
+        this.percentual = percentual;
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
+    }
    
     public int getIdDesconto() {
         return idDesconto;

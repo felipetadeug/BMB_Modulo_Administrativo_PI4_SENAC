@@ -4,9 +4,25 @@
         <servlet-name>CadastrarProduto</servlet-name>
         <servlet-class>servlet.CadastrarProduto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastrarMarca</servlet-name>
+        <servlet-class>servlet.CadastrarMarca</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarMarca</servlet-name>
+        <servlet-class>servlet.ListarMarca</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarMarca</servlet-name>
+        <url-pattern>/CadastrarMarca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarMarca</servlet-name>
+        <url-pattern>/ListarMarca</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
