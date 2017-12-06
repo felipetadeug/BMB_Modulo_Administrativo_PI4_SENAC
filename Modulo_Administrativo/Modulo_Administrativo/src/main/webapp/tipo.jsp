@@ -108,16 +108,13 @@
 								<th>Tipo</th>
 							</tr>
 						</thead>
-						<tbody>
+                                                <c:forEach var="tipo" items="${ListTipo}">
 							<tr>
-								<td>0</td>
-								<td>Cerveja</td>
-							</tr>	
-							<tr>
-								<td>1</td>
-								<td>Vinho</td>
+								<td>${tipo.getIdTipo()}</td>
+								<td>${tipo.getTipo()}</td>
 							</tr>
-						</tbody>						
+                                                </c:forEach>
+						</tbody>							
 					</table>					
 				</div>
 			</div>
