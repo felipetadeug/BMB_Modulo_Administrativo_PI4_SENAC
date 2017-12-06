@@ -16,7 +16,7 @@ public class DaoMarca {
         try {
             ArrayList<Marca> marcas = new ArrayList<Marca>();
             Connection conn = SqlConnection.getConexao();
-            String sql = "select * from marca";
+            String sql = "select * from marca where ativo = 1";
             PreparedStatement stmt = conn.prepareStatement(sql);
 
             ResultSet rs = stmt.executeQuery();
@@ -37,10 +37,11 @@ public class DaoMarca {
     public static void cadastrar(Marca marca) throws Exception {
         try {
             Connection conn = SqlConnection.getConexao();
-            String sql = "insert into marca (marca) values (?)";
+            String sql = "insert into marca (marca, ativo) values (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
 
             stmt.setString(1, marca.getMarca());
+            stmt.setInt(2, 1);
 
             stmt.execute();
             stmt.close();
@@ -67,11 +68,20 @@ public class DaoMarca {
         }
     }
 
-    public static Marca obter(int idMarca) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public static void deletar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "update marca set ativo = 0 where id_marca = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, id);
+            
+            
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }

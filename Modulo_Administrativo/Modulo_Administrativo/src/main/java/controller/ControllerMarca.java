@@ -21,15 +21,7 @@ public class ControllerMarca {
         }
     }
 
-    public static Marca obter(int idMarca) throws Exception {
-        try {
-            return DaoMarca.obter(idMarca);
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
-    public static ArrayList<Marca> obter() throws Exception {
+     public static ArrayList<Marca> obter() throws Exception {
         try {
             return DaoMarca.obter();
         } catch (Exception e) {

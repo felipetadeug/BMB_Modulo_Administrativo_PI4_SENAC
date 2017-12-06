@@ -124,7 +124,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="form-group">
-							<form method="GET" action="./CadastrarMarca">
+							<form method="POST" action="./CadastrarMarca">
 								<label for="marca">Nome - Marca:</label>
 								<input type="text" class="form-control" name="marca" required>
 								<br/>
@@ -171,7 +171,7 @@
 					</div>
 
 					<div class="modal-body">
-						<form method="" action="">
+						<form method="POST" action="./RemoverMarca">
 							<h3>Tem certeza que deseja deletar este registro?</h3>
 							<input type="hidden" name="id">
 							<br>
