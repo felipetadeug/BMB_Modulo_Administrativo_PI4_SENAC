@@ -12,6 +12,10 @@
         <servlet-name>ListarMarca</servlet-name>
         <servlet-class>servlet.ListarMarca</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoverMarca</servlet-name>
+        <servlet-class>servlet.RemoverMarca</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ListarMarca</servlet-name>
         <url-pattern>/ListarMarca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoverMarca</servlet-name>
+        <url-pattern>/RemoverMarca</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
