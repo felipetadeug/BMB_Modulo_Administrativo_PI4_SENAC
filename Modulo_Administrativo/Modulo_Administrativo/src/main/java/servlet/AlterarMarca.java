@@ -18,7 +18,7 @@ import model.Marca;
  *
  * @author felipe.tgeraldo
  */
-public class CadastrarMarca extends HttpServlet {
+public class AlterarMarca extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,9 +33,10 @@ public class CadastrarMarca extends HttpServlet {
             throws ServletException, IOException {
         try{
             Marca marca = new Marca();
+            marca.setIdMarca(Integer.parseInt(request.getParameter("id")));
             marca.setMarca(request.getParameter("marca"));
 
-            ControllerMarca.cadastrar(marca);
+            ControllerMarca.alterar(marca);
             request.getRequestDispatcher("./ListarMarca").forward(request, response);
         }catch (Exception e){
             request.getRequestDispatcher("./ListarMarca").forward(request, response);

@@ -124,9 +124,9 @@
 					</div>
 					<div class="modal-body">
 						<div class="form-group">
-							<form method="" action="">
+							<form method="GET" action="./CadastrarMarca">
 								<label for="marca">Nome - Marca:</label>
-								<input type="text" class="form-control" sname="marca" required>
+								<input type="text" class="form-control" name="marca" required>
 								<br/>
 								<button type="reset" class="btn btn-danger">Limpar</button>
 								<button type="submit" class="btn btn-success">Cadastrar</button>	
@@ -147,9 +147,10 @@
 					</div>
 					<div class="modal-body">
 						<div class="form-group">
-							<form method="" action="">
+							<form method="POST" action="./AlterarMarca">
+                                                                <input type="hidden" name="id">
 								<label for="marca">Novo Nome - Marca:</label>
-								<input type="hidden" name="id">
+								
 								<input type="text" class="form-control" name="marca" required>
 								<br/>
 								<button type="submit" class="btn btn-success">Alterar</button>

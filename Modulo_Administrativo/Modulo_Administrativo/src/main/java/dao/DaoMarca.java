@@ -34,12 +34,37 @@ public class DaoMarca {
         }
     }
 
-    public static void cadastrar(Marca marca) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void cadastrar(Marca marca) throws Exception {
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "insert into marca (marca) values (?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, marca.getMarca());
+
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            throw e;
+        }
     }
 
-    public static void alterar(Marca marca) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void alterar(Marca marca) throws Exception {
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "call alterar_marca(?,?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, marca.getIdMarca());
+            stmt.setString(2, marca.getMarca());
+            
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static Marca obter(int idMarca) {
