@@ -25,12 +25,20 @@
         <servlet-class>servlet.ListarProduto</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ProdutoListar</servlet-name>
-        <servlet-class>servlet.ProdutoListar</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ListarTipo</servlet-name>
         <servlet-class>servlet.ListarTipo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastrarTipo</servlet-name>
+        <servlet-class>servlet.CadastrarTipo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarTipo</servlet-name>
+        <servlet-class>servlet.AlterarTipo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoverTipo</servlet-name>
+        <servlet-class>servlet.RemoverTipo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
@@ -53,12 +61,20 @@
         <url-pattern>/AlterarMarca</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ProdutoListar</servlet-name>
-        <url-pattern>/ProdutoListar</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ListarTipo</servlet-name>
         <url-pattern>/ListarTipo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarTipo</servlet-name>
+        <url-pattern>/CadastrarTipo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarTipo</servlet-name>
+        <url-pattern>/AlterarTipo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoverTipo</servlet-name>
+        <url-pattern>/RemoverTipo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

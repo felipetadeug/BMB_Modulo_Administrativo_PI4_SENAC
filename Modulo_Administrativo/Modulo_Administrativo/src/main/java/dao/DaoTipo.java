@@ -13,12 +13,38 @@ import model.Tipo;
  */
 public class DaoTipo {
 
-    public static void cadastrar(Tipo tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void cadastrar(Tipo tipo) throws Exception {
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "insert into tipo_produto (tipo, ativo) values (?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, tipo.getTipo());
+            stmt.setInt(2, 1);
+
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            throw e;
+        }
     }
 
     public static void alterar(Tipo tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "call alterar_tipo(?,?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, tipo.getIdTipo());
+            stmt.setString(2, tipo.getTipo());
+            
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static Tipo obter(int idTipo) throws Exception {
@@ -48,7 +74,19 @@ public class DaoTipo {
     }
 
     public static void deletar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Connection conn = SqlConnection.getConexao();
+            String sql = "update tipo_produto set ativo = 0 where id_produto = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, id);
+            
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }
