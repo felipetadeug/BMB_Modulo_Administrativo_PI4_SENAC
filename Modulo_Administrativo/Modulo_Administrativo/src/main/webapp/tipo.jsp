@@ -3,7 +3,7 @@
     Created on : 29/11/2017, 22:19:58
     Author     : felipe.tgeraldo
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -108,11 +108,12 @@
 								<th>Tipo</th>
 							</tr>
 						</thead>
-                                                <c:forEach var="tipo" items="${ListTipo}">
-							<tr>
-								<td>${tipo.getIdTipo()}</td>
-								<td>${tipo.getTipo()}</td>
-							</tr>
+                                                <tbody>
+                                                <c:forEach var="tipo" items="${ListTipo}" >
+                                                    <tr>
+                                                        <td>${tipo.getIdTipo()}</td>
+                                                        <td>${tipo.getTipo()}</td>
+                                                    </tr>
                                                 </c:forEach>
 						</tbody>							
 					</table>					
