@@ -20,6 +20,14 @@
         <servlet-name>AlterarMarca</servlet-name>
         <servlet-class>servlet.AlterarMarca</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarProduto</servlet-name>
+        <servlet-class>servlet.ListarProduto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProdutoListar</servlet-name>
+        <servlet-class>servlet.ProdutoListar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -39,6 +47,10 @@
     <servlet-mapping>
         <servlet-name>AlterarMarca</servlet-name>
         <url-pattern>/AlterarMarca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoListar</servlet-name>
+        <url-pattern>/ProdutoListar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

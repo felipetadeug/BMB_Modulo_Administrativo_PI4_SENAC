@@ -12,8 +12,7 @@ window.addEventListener('load', function () {
         //Popula a Modal
         $('#alterar [name=id]').val(produtos.id);
         $('#alterar [name=nome]').val(produtos.produto);
-        $('#alterar [name=marca_produto]').val(produtos.id_marca_produto);
-        $('#alterar [name=tipo_produto]').val(produtos.id_tipo_produto);
+        
         $('#alterar [name=preco]').val(produtos.preco);
         $('#alterar [name=descricao]').val(produtos.descricao);
     });
