@@ -150,22 +150,27 @@
                                     <br/>
 
                                     <label for="img">Adicionar imagem:</label>
-                                    <input type="file" name="img" accept="image/*" required>
+                                    <input type="text" class="form-control" name="img" required>
 
                                     <br/>
 
                                     <div class="row">
                                         <div class="form-group col-md-6 col-lg-6">
                                             <label for="marca_produto">Marca de Produto:</label>
-                                            <select name="tipo_produto" class="form-control" required>											
-                                                <option value=""></option>
+                                            <select name="marca_produto" class="form-control" required>
+                                                <c:forEach var="marca" items="${ListMarca}">
+                                                    <option value="${marca.getIdMarca()}">${marca.getMarca()}</option>    
+                                                </c:forEach>
                                             </select>
+
                                         </div>
 
                                         <div class="form-group col-md-6 col-lg-6">
                                             <label for="tipo_produto">Tipo do Produto:</label>
-                                            <select name="tipo_produto" class="form-control" required>											
-                                                <option value=""></option>
+                                            <select name="tipo_produto" class="form-control" required>	
+                                                <c:forEach var="tipo" items="${ListTipo}">
+                                                    <option value="${tipo.getIdTipo()}">${tipo.getTipo()}</option>    
+                                                </c:forEach>			                   
                                             </select>
                                         </div>
                                     </div>			
@@ -212,8 +217,8 @@
                                     <br/>
 
                                     <label for="img">Adicionar imagem:</label>
-                                    <input type="file" name="img" accept="image/*" required>
-
+                                    <input type="text" class="form-control" name="img" required>
+                                    
                                     <br/>
 
                                     <div class="row">

@@ -5,8 +5,6 @@
  */
 package servlet;
 
-import controller.ControllerMarca;
-import controller.ControllerProduto;
 import controller.ControllerTipo;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author felipe.tgeraldo
+ * @author luis.hlsousa
  */
-public class ProdutoListar extends HttpServlet {
+public class ListarTipo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,13 +31,11 @@ public class ProdutoListar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-            request.setAttribute("ListMarca", ControllerMarca.obter());
             request.setAttribute("ListTipo", ControllerTipo.obter());
-            request.getRequestDispatcher("produto.jsp").forward(request, response);
+            request.getRequestDispatcher("tipo.jsp").forward(request, response);
         }catch (Exception e){
-            request.getRequestDispatcher("produto.jsp").forward(request, response);
+            System.out.println("Não foi possível cadastrar tipo / Servlet" + e);
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

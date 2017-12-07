@@ -28,6 +28,10 @@
         <servlet-name>ProdutoListar</servlet-name>
         <servlet-class>servlet.ProdutoListar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarTipo</servlet-name>
+        <servlet-class>servlet.ListarTipo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -51,6 +55,10 @@
     <servlet-mapping>
         <servlet-name>ProdutoListar</servlet-name>
         <url-pattern>/ProdutoListar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarTipo</servlet-name>
+        <url-pattern>/ListarTipo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
